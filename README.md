@@ -7,6 +7,39 @@ physics course visualization
 3d crystal structure 파트.
 - Ge Diamond cubic unit cell을 볼 수 있으며, 원자 클릭하면 nearest-neighbor 4개 연결되고 거리 d_{NN} 표시됨.
 - latice constant a를 바꾸면 d_{NN}=asqrt3/4, n_{Ge}=8/a^3 
+```
+ge-crystal 
+├── app.py     # PySide6 창 + PyVista + YAML + slider를 연결
+├── crystal.py      # diamond 구조 생성 + periodic image + nearest neighbor 탐색
+├── properties.py   # 단위 변환과 물리량 계산
+└── visualization.py    # PyVista 쪽만 담당
+
+```
+파이프라인 
+```
+[FCC Bravais lattice]
+       R points
+          │
+          │ attach
+          ▼
+[Ge basis]
+b1=(0,0,0)
+b2=(¼,¼,¼)
+          │
+          │ r = R + b
+          ▼
+[Ge diamond crystal]
+          │
+          ├─ atom click
+          │    ↓
+          │  4 nearest neighbors
+          │    ↓
+          │  dNN = √3a/4
+          │
+          ├─ nGe = 8/a³
+          ├─ mass density
+          └─ valence electron density
+```
 #### notations 
 | 기호 | 뜻 | 설명 |
 |---|---|---|
