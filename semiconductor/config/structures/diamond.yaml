@@ -1,0 +1,12 @@
+# diamond.yaml
+# Diamond cubic unit cell
+name: diamond_cubic
+
+bravais_lattice: fcc
+
+basis_fractional:
+  - [0.0, 0.0, 0.0]
+  - [0.25, 0.25, 0.25]
+
+visualization:
+  show_tetrahedral_sites: true

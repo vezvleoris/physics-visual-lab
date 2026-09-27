@@ -1,0 +1,17 @@
+material:
+  name: Germanium
+  symbol: Ge
+
+crystal:
+  structure: diamond_cubic
+  lattice_constant_angstrom: 5.66
+
+  bravais_lattice: fcc
+
+  basis:
+    - [0.0, 0.0, 0.0]
+    - [0.25, 0.25, 0.25]
+
+atomic:
+  molar_mass_g_mol: 72.6
+  valence_electrons: 4
